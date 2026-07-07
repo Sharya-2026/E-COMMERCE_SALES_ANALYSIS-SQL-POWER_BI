@@ -43,7 +43,6 @@ The project demonstrates advanced SQL concepts such as Window Functions, CTEs, V
 - SQL
 - Power BI
 - DAX
-- Python (Optional)
 - GitHub
 
 ---
