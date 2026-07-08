@@ -63,7 +63,6 @@ CREATE TABLE  FINAL(
 SELECT * FROM FINAL;
 SELECT COUNT(*) FROM final;
 
----Basic Analysis
 --Total Orders
 SELECT COUNT(Order_id)
 FROM FINAL;
@@ -85,8 +84,6 @@ FROM FINAL;
 SELECT SUM(tax_amount_usd)
 FROM FINAL;
 
----Sales Analysis
-
 --Revenue by Year
 SELECT  Year, SUM(final_amount_usd
 ) AS Total_Revenue
@@ -99,7 +96,7 @@ SELECT  MONTH, SUM(final_amount_usd
 FROM FINAL
 GROUP BY MONTH
 ORDER BY MONTH;
---Revenue by Quarter
+
 --Revenue by Product Category
 SELECT  product_category
 , SUM(final_amount_usd
@@ -119,7 +116,6 @@ SELECT  platform, SUM(final_amount_usd
 FROM FINAL
 GROUP BY Platform
 ORDER BY Platform;
----Customer Analysis
 --Customer Segment Distribution
 SELECT Customer_Segment, COUNT(*) AS Customer_Count
 FROM FINAL
@@ -127,74 +123,72 @@ GROUP BY Customer_Segment
 ORDER BY Customer_Count DE
 --Revenue by Country
 SELECT
-    country,
-    SUM(total_paid_usd) AS revenue
+country,
+SUM(total_paid_usd) AS revenue
 FROM FINAL
 GROUP BY country
 ORDER BY revenue DESC;
 --Revenue by Category
 SELECT
-    product_category,
-    SUM(total_paid_usd) AS revenue
+product_category,
+SUM(total_paid_usd) AS revenue
 FROM ecommerce_sales
 GROUP BY product_category
 ORDER BY revenue DESC;
 --Revenue by Platform
 SELECT
-    platform,
-    SUM(total_paid_usd) AS revenue
+platform,
+SUM(total_paid_usd) AS revenue
 FROM ecommerce_sales
 GROUP BY platform
 ORDER BY revenue DESC;
 --Revenue by Payment Method
 SELECT
-    payment_method,
-    SUM(total_paid_usd) AS revenue
+ payment_method,
+SUM(total_paid_usd) AS revenue
 FROM ecommerce_sales
 GROUP BY payment_method
 ORDER BY revenue DESC;
 --Revenue by Shipping Method
 SELECT
-    shipping_method,
-    SUM(total_paid_usd) AS revenue
+ shipping_method,
+ SUM(total_paid_usd) AS revenue
 FROM ecommerce_sales
 GROUP BY shipping_method
 ORDER BY revenue DESC;
 --Revenue by Acquisition Channel
 SELECT
-    acquisition_channel,
-    SUM(total_paid_usd) AS revenue
+acquisition_channel,
+SUM(total_paid_usd) AS revenue
 FROM ecommerce_sales
 GROUP BY acquisition_channel
 ORDER BY revenue DESC;
 --Top 10 Highest Spending Customers
 SELECT order_id,
-       total_paid_usd
+total_paid_usd
 FROM FINAL
 ORDER BY total_paid_usd DESC
 LIMIT 10;
 -- Rank Product Categories by Revenue (RANK)
 SELECT
-    product_category,
-    SUM(total_paid_usd) AS revenue,
-    RANK() OVER(ORDER BY SUM(total_paid_usd) DESC) AS category_rank
+ product_category,
+ SUM(total_paid_usd) AS revenue,
+RANK() OVER(ORDER BY SUM(total_paid_usd) DESC) AS category_rank
 FROM FINAL
 GROUP BY product_category;
 -- Dense Rank Countries by Sales
 SELECT
-    country,
-    SUM(total_paid_usd) AS revenue,
-    DENSE_RANK() OVER(ORDER BY SUM(total_paid_usd) DESC) AS rank
+ country,
+SUM(total_paid_usd) AS revenue,
+ DENSE_RANK() OVER(ORDER BY SUM(total_paid_usd) DESC) AS rank
 FROM FINAL
 GROUP BY country;
 -- Running Monthly Revenue
 SELECT
-    year,
-    month,
-    SUM(total_paid_usd) AS monthly_sales,
-
-    SUM(SUM(total_paid_usd))
-    OVER(ORDER BY year, month) AS running_total
+year,month,
+SUM(total_paid_usd) AS monthly_sales,
+ SUM(SUM(total_paid_usd))
+OVER(ORDER BY year, month) AS running_total
 FROM FINAL
 GROUP BY year, month
 ORDER BY year, month;
