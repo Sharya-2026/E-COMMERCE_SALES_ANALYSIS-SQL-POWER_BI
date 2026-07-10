@@ -1,112 +1,131 @@
-# 📊 SQL Project Report – E-Commerce Sales Data Analysis
+Since these are your **SQL + Power BI Dashboard** files for the same project, you should have **one professional GitHub README/report** instead of two separate reports.
 
-## Project Overview
+Use the following:
 
-This project demonstrates end-to-end SQL analysis on an E-Commerce Sales dataset using PostgreSQL. The objective is to transform raw transactional data into meaningful business insights through SQL queries, aggregate functions, conditional statements, Common Table Expressions (CTEs), Window Functions, Views, and analytical reporting.
+---
 
-The project covers sales performance, customer behavior, revenue trends, product analysis, shipping performance, payment methods, customer satisfaction, and return analysis. It simulates real-world business scenarios and showcases practical SQL skills required for Data Analyst roles.
+# 📊 E-Commerce Sales Analytics Dashboard (SQL + Power BI)
 
-## Objectives
+## 📌 Project Overview
 
-* Analyze overall business performance.
-* Measure revenue and sales trends over time.
+This project focuses on analyzing an E-Commerce Sales dataset using SQL and Power BI to uncover business insights related to sales performance, customer behavior, product categories, payment methods, and regional trends. SQL was used for data preparation and transformation, while Power BI was used to build an interactive dashboard for visualization and decision-making.
+
+---
+
+## 🎯 Objectives
+
+* Analyze overall sales performance.
+* Identify top-performing products and categories.
 * Understand customer purchasing behavior.
-* Evaluate product category performance.
-* Analyze country-wise and platform-wise sales.
-* Measure customer satisfaction and return rates.
-* Apply advanced SQL techniques for business reporting.
+* Compare sales across countries and platforms.
+* Evaluate payment methods and shipping preferences.
+* Monitor monthly and quarterly sales trends.
+* Build an interactive dashboard for business insights.
 
-## SQL Concepts Used
+---
 
-* DDL (CREATE TABLE, DROP TABLE)
-* Aggregate Functions (SUM, COUNT, AVG)
-* GROUP BY and ORDER BY
-* CASE Statements
-* Common Table Expressions (CTEs)
-* Window Functions
-* RANK()
-* DENSE_RANK()
-* ROW_NUMBER()
-* Views
-* Subqueries
-* Filtering and Sorting
+## 🛠️ Tools & Technologies
 
-## Business Analysis Performed
+* **SQL** – Data cleaning, table creation, transformation, and querying.
+* **Power BI** – Dashboard development and interactive visualizations.
+* **Power Query** – Data loading and preprocessing.
+* **DAX** – Custom measures and KPIs.
+* **Git & GitHub** – Version control and project hosting.
 
-### Sales Analysis
+---
 
+## 📂 Dataset Features
+
+The dataset contains information such as:
+
+* Order ID
+* Year, Month, Quarter
+* Country
+* Platform
+* Customer Segment
+* Customer Age Group
+* Customer Gender
+* Product Category
+* Quantity Ordered
+* Unit Price
+* Discount
+* Shipping Cost
+* Tax Amount
+* Final Amount
+* Payment Method
+* Shipping Method
+* Order Status
+
+---
+
+## ⚙️ SQL Work
+
+The SQL script was used to:
+
+* Create the main sales table.
+* Define appropriate data types and constraints.
+* Organize transactional data.
+* Prepare the dataset for visualization.
+* Enable efficient querying and analysis.
+
+---
+
+## 📊 Power BI Dashboard
+
+The dashboard includes interactive visualizations for:
+
+* Total Sales
 * Total Orders
-* Total Revenue
-* Average Order Value
-* Revenue by Year
-* Revenue by Month
-* Revenue by Quarter
-* Revenue by Country
-* Revenue by Platform
-* Revenue by Product Category
+* Revenue Trends
+* Sales by Country
+* Sales by Platform
+* Sales by Product Category
+* Customer Segment Analysis
+* Age Group Distribution
+* Gender-wise Sales
+* Payment Method Analysis
+* Shipping Method Analysis
+* Monthly & Quarterly Performance
+* Dynamic Filters and Slicers
 
-### Customer Analysis
+---
 
-* Customer Segment Distribution
-* Revenue by Customer Segment
-* Repeat Customer Analysis
-* Customer Spending Above Average
-* Customer Spending Quartiles
+## 📈 Key Insights
 
-### Product Analysis
+* Identified the highest revenue-generating product categories.
+* Compared sales performance across multiple countries.
+* Analyzed customer demographics and purchasing behavior.
+* Evaluated platform-wise sales contribution.
+* Monitored seasonal and quarterly sales trends.
+* Assessed the impact of discounts on revenue.
+* Compared payment and shipping method preferences.
 
-* Best Performing Product Categories
-* Highest Revenue Category in Each Country
-* Top Product Category for Every Platform
+---
 
-### Shipping & Logistics Analysis
+## 📌 Project Workflow
 
-* Average Delivery Time
-* Shipping Method Performance
-* Return Rate by Product Category
+1. Data Collection
+2. SQL Data Preparation
+3. Data Cleaning & Transformation
+4. Import into Power BI
+5. Data Modeling
+6. DAX Measure Creation
+7. Dashboard Design
+8. Business Insight Generation
 
-### Financial Analysis
+---
 
-* Total Tax Collected
-* Discount Analysis
-* Highest Discount Orders
-* Revenue Contribution by Country
+## 🚀 Skills Demonstrated
 
-### Customer Experience Analysis
-
-* Customer Satisfaction Classification
-* Platform-wise Product Ratings
-* Preferred Payment Methods
-* Acquisition Channel Performance
-
-### Time-Series Analysis
-
-* Running Monthly Revenue
-* Previous Month Revenue using LAG()
-* Month-over-Month Revenue Growth (%)
-
-## Key Features
-
-* Comprehensive business KPI analysis
-* Advanced SQL Window Functions
-* CTE-based reporting
-* Revenue ranking and trend analysis
-* Customer segmentation insights
-* Sales performance dashboard-ready queries
-* Reusable SQL View for reporting
-
-## Skills Demonstrated
-
-* PostgreSQL
+* SQL Database Design
 * Data Cleaning
-* Business Intelligence Queries
-* Analytical SQL
-* Data Aggregation
-* Window Functions
-* CTEs
-* Query Optimization
-* Business Reporting
+* Data Transformation
+* Data Analysis
+* Power BI Dashboard Development
+* DAX Calculations
+* Data Visualization
+* Business Intelligence
+* Analytical Thinking
+* KPI Reporting
 
-## Outcome
-
-This project demonstrates the ability to solve real-world business problems using SQL. The analysis provides actionable insights into revenue growth, customer behavior, product performance, shipping efficiency, and customer satisfaction. It reflects practical data analysis techniques commonly used in business intelligence and data analyst roles.
+This project demonstrates an end-to-end Business Intelligence workflow by combining SQL for data preparation with Power BI for interactive visualization. The dashboard enables stakeholders to monitor sales performance, understand customer behavior, evaluate business trends, and support data-driven decision-making through clear and actionable insights.
